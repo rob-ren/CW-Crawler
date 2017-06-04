@@ -1,0 +1,7 @@
+services:
+#    database.example:
+#        class: DatabaseBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    item_business:
+        class: AppBundle\Business\ItemBusinessModel
+        arguments: ["@doctrine"]
