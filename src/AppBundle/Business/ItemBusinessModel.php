@@ -38,6 +38,8 @@ class ItemBusinessModel extends AbstractBusinessModel
             $old_item->setProductName($item->getProductName());
             $old_item->setPrice($item->getPrice());
             $old_item->setSave($item->getSave());
+            $old_item->setTimestamp(new \DateTime());
+            $this->persistEntity($old_item);
             return $old_item;
         }
         $this->persistEntity($item);
